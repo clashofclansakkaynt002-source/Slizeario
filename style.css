@@ -1,0 +1,49 @@
+body {
+    margin: 0; background: #1a1a1a; color: white;
+    font-family: 'Segoe UI', sans-serif; display: flex;
+    justify-content: center; align-items: center; height: 100vh; overflow: hidden;
+}
+
+#game-container { position: relative; width: 100%; max-width: 400px; text-align: center; }
+
+#ui {
+    display: flex; justify-content: space-between; padding: 15px;
+    background: #252525; border-radius: 15px 15px 0 0; font-weight: bold;
+}
+
+.stat-box { font-size: 22px; color: #f1c40f; }
+
+canvas {
+    background: #000; display: block; width: 100%;
+    border: 3px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* КЕРУВАННЯ */
+#mobile-controls {
+    background: #252525; padding: 20px 10px;
+    border-radius: 0 0 15px 15px; display: flex; flex-direction: column; align-items: center;
+}
+
+.row { display: flex; gap: 10px; margin: 5px; }
+
+.ctrl-btn {
+    width: 85px; height: 85px; border: none; background: #3d3d3d;
+    color: white; font-size: 30px; border-radius: 15px;
+    box-shadow: 0 6px #222; active-transform: translateY(4px);
+    transition: 0.1s; touch-action: manipulation; /* Запобігає зуму при натисканні */
+}
+
+.ctrl-btn:active {
+    box-shadow: 0 2px #222; transform: translateY(4px); background: #f1c40f;
+}
+
+#game-over {
+    position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.95); width: 80%; padding: 30px;
+    border-radius: 20px; border: 2px solid #f1c40f; z-index: 100;
+}
+
+.restart-btn {
+    padding: 15px 25px; background: #f1c40f; border: none;
+    border-radius: 10px; font-weight: bold; cursor: pointer;
+}
