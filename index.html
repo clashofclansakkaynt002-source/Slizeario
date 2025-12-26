@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gold Hunter Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui">
+            <div class="stat-box">🪙 <span id="score">0</span></div>
+            <div class="stat-box">🏆 <span id="highscore">0</span></div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="mobile-controls">
+            <div class="row"><button id="btn-up" class="ctrl-btn">▲</button></div>
+            <div class="row">
+                <button id="btn-left" class="ctrl-btn">◀</button>
+                <button id="btn-down" class="ctrl-btn">▼</button>
+                <button id="btn-right" class="ctrl-btn">▶</button>
+            </div>
+        </div>
+
+        <div id="game-over" style="display: none;">
+            <h2>ГРА ЗАКІНЧЕНА</h2>
+            <p>Твій результат: <span id="final-score">0</span></p>
+            <button onclick="location.reload()" class="restart-btn">СПРОБУВАТИ ЗНОВУ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
